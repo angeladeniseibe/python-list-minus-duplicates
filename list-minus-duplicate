@@ -1,0 +1,17 @@
+def remove_duplicates(inputs):
+    unique_inputs = []
+    seen = set()
+    for item in inputs:
+        if item not in seen:
+            unique_inputs.append(item)
+            seen.add(item)
+    return ', '.join(unique_inputs)
+
+def main():
+    user_input = input("Input String or number or both, separate them by comma: ")
+    inputs = [x.strip() for x in user_input.split(",")]
+
+    print("Output:", remove_duplicates(inputs))
+
+if __name__ == "__main__":
+    main()
